@@ -12,3 +12,4 @@ dnf install VirtualBox-5.2 -y
 service vboxdrv start
 usermod -a -G vboxusers caiobentes
 sudo dnf install -y https://linux.dropbox.com/packages/fedora/nautilus-dropbox-2015.10.28-1.fedora.x86_64.rpm
+dnf install nmap
