@@ -11,7 +11,7 @@ wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -O /et
 dnf install VirtualBox-5.2 -y
 service vboxdrv start
 usermod -a -G vboxusers caiobentes
-sudo dnf install -y https://linux.dropbox.com/packages/fedora/nautilus-dropbox-2015.10.28-1.fedora.x86_64.rpm
+dnf install -y https://linux.dropbox.com/packages/fedora/nautilus-dropbox-2015.10.28-1.fedora.x86_64.rpm
 dnf install nmap
 #Instalação do Telegram Desktop
 wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz
@@ -21,5 +21,9 @@ ln -sf /opt/telegram/Telegram /usr/bin/telegram
 echo -e '[Desktop Entry]\n Version=1.0\n Exec=/opt/telegram/Telegram\n Icon=Telegram\n Type=Application\n Categories=Application;Network;' | sudo tee /usr/share/applications/telegram.desktop
 chmod +x /usr/share/applications/telegram.desktop
 cp /usr/share/applications/telegram.desktop  /home/caiobentes/Área\ de\ trabalho/
-sudo dnf install snapd
-sudo ln -s /var/lib/snapd/snap /snap
+dnf install snapd
+ln -s /var/lib/snapd/snap /snap
+#Instala emulador de terminal
+dnf install terminator
+#Instala cliente bit-torrent
+dnf install transmission
