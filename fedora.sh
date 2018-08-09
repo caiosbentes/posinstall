@@ -27,3 +27,5 @@ ln -s /var/lib/snapd/snap /snap
 dnf install terminator
 #Instala cliente bit-torrent
 dnf install transmission
+dnf install freedrp
+dnf install hplib-gui
